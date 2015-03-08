@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Signature Pad demo</title>
+  <meta name="description" content="Signature Pad - HTML5 canvas based smooth signature drawing using variable width spline interpolation.">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Signature pad : HTML5 canvas based smooth signature drawing">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>Signature pad</title>
-    
-    
-      <script type="text/javascript">
+  <link rel="stylesheet" href="css/signature-pad.css">
+
+  <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39365077-1']);
     _gaq.push(['_trackPageview']);
@@ -21,74 +22,24 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/koharker/signature_pad">View on GitHub</a>
-
-          <h1 id="project_title">Signature pad</h1>
-          <h2 id="project_tagline">HTML5 canvas based smooth signature drawing</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/koharker/signature_pad/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/koharker/signature_pad/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>
-</p>
-  
-  Signature Pad demo
-  
-
-<p></p>
-
-<p>
-  </p>
-
-<p></p>
-
-<p>
-</p>
+</head>
+<body onselectstart="return false">
   <a id="github" href="https://github.com/kharker/signature_pad">
-    <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
   </a>
 
-<p></p><div id="signature-pad">
-    <div>
-      
+  <div id="signature-pad" class="m-signature-pad">
+    <div class="m-signature-pad--body">
+      <canvas></canvas>
     </div>
-    <div>
-      <div>Sign above</div>
-      Clear
-      Save
+    <div class="m-signature-pad--footer">
+      <div class="description">Sign above</div>
+      <button class="button clear" data-action="clear">Clear</button>
+      <button class="button save" data-action="save">Save</button>
     </div>
   </div>
 
-<p>
-  
-
-</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Signature pad maintained by <a href="https://github.com/koharker">koharker</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+  <script src="js/signature_pad.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
