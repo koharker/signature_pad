@@ -38,7 +38,7 @@ document.addEventListener('copy', function(e){
         alert("There is nothing to copy.");
     } else {
         signaturePad.copy();
-        e.clipboardData.setData(signaturePad.toDataURL());
+        e.clipboardData.setData('signaturePad.toDataURL()');
 //     e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
         e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
     }
