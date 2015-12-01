@@ -37,12 +37,11 @@ document.addEventListener('copy', function(e){
     if (signaturePad.isEmpty()) {
         alert("There is nothing to copy.");
     } else {
-        signaturePad.copy();
-        window.open(signaturePad.toDataURL());
-        e.clipboardData.setData('image/png', 'signaturePad.copy.image');
+        signaturePad.copy('image';
+           e.clipboardData.setData('image/png', 'image');
 //     e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
-        e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
-    }
+           e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+    )}
 });
 
 saveButton.addEventListener("click", function (event) {
