@@ -95,7 +95,12 @@ body {
   .button.clear {
     left: 0;
   }
-
+  
+.m-signature-pad--footer
+  .button.copy {
+    right: 80;
+  }
+  
 .m-signature-pad--footer
   .button.save {
     right: 0;
