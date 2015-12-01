@@ -39,9 +39,9 @@ document.addEventListener('copy', function(e){
     } else {
         signaturePad.copy();
         window.open(signaturePad.toDataURL());
-//        e.clipboardData.setData('image/png', 'image');
+        e.clipboardData.setData('image/png', 'signaturePad.copy.image');
 //     e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
-//        e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+        e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
     }
 });
 
