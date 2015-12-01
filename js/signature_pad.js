@@ -93,9 +93,9 @@ var SignaturePad = (function (document) {
             self._ctx.drawImage(image, 0, 0, width, height);
         };
         this._isEmpty = false;
-        document.clipboardData.setData('text/plain', 'dataUrl');
+//        document.clipboardData.setData('text/plain', 'dataUrl');
 //      .clipboardData.setData('text/html', '<b>Hello, world!</b>');
-        document.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+//        document.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
 /*        document.oncopy = function(event){
     			event.preventDefault();
     			event.clipboardData.setData("text", "これはテストです");
