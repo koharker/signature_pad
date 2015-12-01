@@ -95,11 +95,11 @@ var SignaturePad = (function (document) {
         this._isEmpty = false;
         document.addEventListener('copy', function(e){
             e.clipboardData.setData('text/plain', 'Hello, world!');
-            e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
+//            e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
             e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
         }); 
-        var copyEvent = new ClipboardEvent('copy', { dataType: 'image/png', data: 'image' } );
-        document.dispatchEvent(copyEvent);
+//        var copyEvent = new ClipboardEvent('copy', { dataType: 'image/png', data: 'image' } );
+//        document.dispatchEvent(copyEvent);
     };
 
     SignaturePad.prototype.toDataURL = function (imageType, quality) {
