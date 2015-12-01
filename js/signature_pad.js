@@ -93,10 +93,10 @@ var SignaturePad = (function (document) {
             self._ctx.drawImage(image, 0, 0, width, height);
         };
         this._isEmpty = false;
-        document.oncopy = function(event){
+/*        document.oncopy = function(event){
     			event.preventDefault();
     			event.clipboardData.setData("text", "これはテストです");
-        };
+        };*/
 /*        document.addEventListener('copy', function(e){
             e.clipboardData.setData('text/plain', 'Hello, world!');
             e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
