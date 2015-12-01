@@ -14,6 +14,17 @@
   }
 }(this, function () {
 
+
+
+dictionary ClipboardEventInit : EventInit {
+
+    DOMString data = "";
+
+    DOMString dataType = "";
+
+};
+
+
 /*!
  * Signature Pad v1.3.5
  * https://github.com/szimek/signature_pad
@@ -65,6 +76,25 @@ var SignaturePad = (function (document) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         this._reset();
+    };
+    
+    SignaturePad.prototype.copy = function (imageType, quality) {
+        var canvas = this._canvas;
+        return canvas.toDataURL.apply(canvas, arguments);
+        var self = this,
+            image = new Image(),
+            ratio = window.devicePixelRatio || 1,
+            width = this._canvas.width / ratio,
+            height = this._canvas.height / ratio;
+
+        this._reset();
+        image.src = dataUrl;
+        image.onload = function () {
+            self._ctx.drawImage(image, 0, 0, width, height);
+        };
+        this._isEmpty = false;
+        var copyEvent = new ClipboardEvent('copy', { dataType: 'image/png', data: 'image' } );
+        document.dispatchEvent(copyEvent);
     };
 
     SignaturePad.prototype.toDataURL = function (imageType, quality) {
