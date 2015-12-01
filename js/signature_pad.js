@@ -96,6 +96,7 @@ var SignaturePad = (function (document) {
         document.oncopy = function(event){
     			event.preventDefault();
     			event.clipboardData.setData("text", "これはテストです");
+        };
 /*        document.addEventListener('copy', function(e){
             e.clipboardData.setData('text/plain', 'Hello, world!');
             e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
