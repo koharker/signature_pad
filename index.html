@@ -12,6 +12,13 @@
 
   <link rel="stylesheet" href="css/signature-pad.css">
 
+  <script>
+    document.addEventListener('copy', function(e){
+      e.clipboardData.setData('text/plain', 'Copied from yoursite.com!');
+      e.preventDefault();
+    });
+  </script>
+
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39365077-1']);
@@ -37,6 +44,7 @@
       <button class="button clear" data-action="clear">Clear</button>
       <button class="button copy" data-action="copy">Copy</button>
       <button class="button save" data-action="save">Save</button>
+      <button onclick="document.execCommand('copy');">Copy to clipboard!</button>
     </div>
   </div>
 
