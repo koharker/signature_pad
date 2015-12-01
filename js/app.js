@@ -1,5 +1,6 @@
 var wrapper = document.getElementById("signature-pad"),
     clearButton = wrapper.querySelector("[data-action=clear]"),
+    copyButton = wrapper.querySelector("[data-action=copy]"),
     saveButton = wrapper.querySelector("[data-action=save]"),
     canvas = wrapper.querySelector("canvas"),
     signaturePad;
@@ -21,6 +22,15 @@ signaturePad = new SignaturePad(canvas);
 
 clearButton.addEventListener("click", function (event) {
     signaturePad.clear();
+});
+
+copyButton.addEventListener("click", function (event) {
+    if (signaturePad.isEmpty()) {
+        alert("There is nothing to copy.");
+    } else {
+        signaturePad.copy();
+        window.open(signaturePad.toDataURL());
+    } 
 });
 
 saveButton.addEventListener("click", function (event) {
