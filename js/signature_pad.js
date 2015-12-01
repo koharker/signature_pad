@@ -97,11 +97,6 @@ var SignaturePad = (function (document) {
     			event.preventDefault();
     			event.clipboardData.setData("text", "これはテストです");
         };*/
-        document.addEventListener('copy', function(e){
-            e.clipboardData.setData('image/png', 'image');
-            e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
-        });
-      
 //        var copyEvent = new ClipboardEvent('copy', { dataType: 'image/png', data: 'image' } );
 //        document.dispatchEvent(copyEvent);
     };
